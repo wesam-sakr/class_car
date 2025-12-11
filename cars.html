@@ -72,13 +72,13 @@
           >
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a href="index.html" class="nav-link active"> الرئيسية</a>
+                <a href="index.html" class="nav-link"> الرئيسية</a>
               </li>
               <li class="nav-item">
                 <a href="about_us.html" class="nav-link">نبذة عنا</a>
               </li>
               <li class="nav-item">
-                <a href="cars.html" class="nav-link">السيارات</a>
+                <a href="cars.html" class="nav-link active">السيارات</a>
               </li>
               <li class="nav-item">
                 <a href="finance.html" class="nav-link">التمويل</a>
@@ -136,6 +136,7 @@
                         class="btn-check"
                         name="c_b_filter"
                         id="option1"
+                        value="KIA"
                       />
                       <label class="c_b_label" for="option1">
                         <img src="images/brands/brand (4).svg" alt="KIA" />
@@ -147,6 +148,7 @@
                         class="btn-check"
                         name="c_b_filter"
                         id="option2"
+                        value="Audi"
                       />
                       <label class="c_b_label" for="option2">
                         <img
@@ -161,6 +163,7 @@
                         class="btn-check"
                         name="c_b_filter"
                         id="option3"
+                        value="Hyundai"
                       />
                       <label class="c_b_label" for="option3">
                         <img src="images/brands/60.png" alt="Hyundai" />
@@ -172,6 +175,7 @@
                         class="btn-check"
                         name="c_b_filter"
                         id="option4"
+                        value="BMW"
                       />
                       <label class="c_b_label" for="option4">
                         <img src="images/brands/brand (1).svg" alt="BMW" />
@@ -183,6 +187,7 @@
                         class="btn-check"
                         name="c_b_filter"
                         id="option5"
+                        value="Chevrolet"
                       />
                       <label class="c_b_label" for="option5">
                         <img
@@ -197,6 +202,7 @@
                         class="btn-check"
                         name="c_b_filter"
                         id="option6"
+                        value="TOYOTA"
                       />
                       <label class="c_b_label" for="option6">
                         <img src="images/brands/4.png" alt="TOYOTA" />
@@ -208,6 +214,7 @@
                         class="btn-check"
                         name="c_b_filter"
                         id="option7"
+                        value="NISSAN"
                       />
                       <label class="c_b_label" for="option7">
                         <img src="images/brands/58.png" alt="NISSAN" />
@@ -273,12 +280,18 @@
                     </div>
                   </div>
                   <div class="col">
-                    <select class="form-select form-control">
-                      <option value hidden>الماركة</option>
-                      <option value>نيسان</option>
-                      <option value>هيونداي</option>
-                      <option value>كيا</option>
-                      <option value>تويوتا</option>
+                    <select
+                      class="form-select form-control"
+                      name="car_brand_select"
+                    >
+                      <option value="" hidden>الماركة</option>
+                      <option value="NISSAN">نيسان</option>
+                      <option value="Chevrolet">شيفورليه</option>
+                      <option value="BMW">بي ام دابليو</option>
+                      <option value="Audi">اودي</option>
+                      <option value="Hyundai">هيونداي</option>
+                      <option value="KIA">كيا</option>
+                      <option value="TOYOTA">تويوتا</option>
                     </select>
                   </div>
                   <div class="col">
@@ -954,6 +967,7 @@
     <script src="js/script.js"></script>
 
     <script>
+      //cars price filter
       $(function () {
         var priceFromInput = document.querySelector("[name='from_price']");
         var priceToInput = document.querySelector("[name='to_price']");
@@ -1007,6 +1021,33 @@
 
         $("#amount").val(startFrom + " - " + startTo);
       });
+
+      // car brand radio & select
+      $(document).ready(function () {
+        $("select[name='car_brand_select']").on("change.select2", function () {
+          let selectedBrand = $(this).val();
+
+          // شيّك على الراديو
+          $("input[name='c_b_filter'][value='" + selectedBrand + "']").prop(
+            "checked",
+            true
+          );
+        });
+
+        $("input[name='c_b_filter']").on("change", function () {
+          let brandValue = $(this).val();
+
+          // غيّر قيمة الـ Select
+          let selectElement = $("select[name='car_brand_select']");
+
+          selectElement.val(brandValue);
+
+          // شغّل Select2 Update
+          selectElement.trigger("change");
+        });
+
+      });
+      
     </script>
   </body>
 </html>
