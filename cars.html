@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Car</title>
+
+    <link rel="icon" type="image/x-icon" href="images/logo.svg" />
+
+    <!-- Bootstrap link  -->
+    <link
+      rel="stylesheet"
+      href="css/bootstrap.rtl.min.css"
+      id="bootstrap-style"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css"
+      integrity="sha512-t7Few9xlddEmgd3oKZQahkNI4dS6l80+eGEzFQiqtyVYdvcSG2D3Iub77R20BdotfRPA9caaRkg1tyaJiPmO0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- font awesom link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- owl-carousel link -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- select2 link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light p-0 top-0">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand m-0" href="index.html">
+            <img src="images/logo.svg" alt />
+          </a>
+          <div
+            class="collapse navbar-collapse justify-content-between align-items-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link active"> الرئيسية</a>
+              </li>
+              <li class="nav-item">
+                <a href="about_us.html" class="nav-link">نبذة عنا</a>
+              </li>
+              <li class="nav-item">
+                <a href="cars.html" class="nav-link">السيارات</a>
+              </li>
+              <li class="nav-item">
+                <a href="finance.html" class="nav-link">التمويل</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact_us.html" class="nav-link">اتصل بنا</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav m-0">
+              <div class="d-flex align-items-center gap-3">
+                <li class="nav-item lang">
+                  <a href="#" class="nav-link active">عربي</a>
+                </li>
+                <li class="nav-item lang">
+                  <a href="#" class="nav-link">En</a>
+                </li>
+              </div>
+              <li class="nav-item">
+                <a href="cars.html" class="nav-link main-btn">
+                  اختر سيارتك الآن
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ==== start breadcrumb ==== -->
+    <section>
+      <nav class="breadcrumb-wrapper" aria-label="breadcrumb">
+        <div class="container-fluid">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
+            <li class="breadcrumb-item active" aria-current="page">السيارات</li>
+          </ol>
+          <p class="breadcrumb-title">السيارات</p>
+        </div>
+      </nav>
+    </section>
+    <!-- ==== end breadcrumb ==== -->
+
+    <!-- السيارات -->
+    <div class="car_filter mb-5 py-5">
+      <div class="container-fluid">
+        <form action="">
+          <div class="row align-items-start g-4">
+            <div class="col-12 px-md-0">
+              <div class="d-flex gap-2">
+                <div class="card car_brand_filter flex-grow-1">
+                  <div class="owl-carousel">
+                    <div>
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="c_b_filter"
+                        id="option1"
+                      />
+                      <label class="c_b_label" for="option1">
+                        <img src="images/brands/brand (4).svg" alt="KIA" />
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="c_b_filter"
+                        id="option2"
+                      />
+                      <label class="c_b_label" for="option2">
+                        <img
+                          src="images/brands/Audi-Logo_2016.png"
+                          alt="Audi"
+                        />
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="c_b_filter"
+                        id="option3"
+                      />
+                      <label class="c_b_label" for="option3">
+                        <img src="images/brands/60.png" alt="Hyundai" />
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="c_b_filter"
+                        id="option4"
+                      />
+                      <label class="c_b_label" for="option4">
+                        <img src="images/brands/brand (1).svg" alt="BMW" />
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="c_b_filter"
+                        id="option5"
+                      />
+                      <label class="c_b_label" for="option5">
+                        <img
+                          src="images/brands/brand (1).png"
+                          alt="Chevrolet"
+                        />
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="c_b_filter"
+                        id="option6"
+                      />
+                      <label class="c_b_label" for="option6">
+                        <img src="images/brands/4.png" alt="TOYOTA" />
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="c_b_filter"
+                        id="option7"
+                      />
+                      <label class="c_b_label" for="option7">
+                        <img src="images/brands/58.png" alt="NISSAN" />
+                      </label>
+                    </div>
+                    <div>
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="c_b_filter"
+                        id="option8"
+                      />
+                      <label class="c_b_label" for="option8">
+                        <img src="images/brands/58.png" alt="NISSAN" />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <button type="button" id="filter" class="card">
+                  <i class="bi bi-sliders fs-5"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4 col-lg-3 filter card">
+              <div class="card-body">
+                <div class="filter-header">
+                  <p class="small">تصفية النتائج</p>
+                  <button class="bg-transparent p-0">
+                    <i class="bi bi-trash text-danger"></i>
+                  </button>
+
+                  <!-- <button class="btn-close"></button> -->
+                </div>
+                <div class="row row-cols-1 g-3">
+                  <div class="col">
+                    <div class="middle">
+                      <p class="mb-4 small">السعر من – إلى</p>
+                      <input
+                        type="hidden"
+                        id="from_price"
+                        name="from_price"
+                        value=""
+                      />
+                      <input
+                        type="hidden"
+                        id="to_price"
+                        name="to_price"
+                        value=""
+                      />
+                      <div class="price-range-slider position-relative">
+                        <div class="range-value d-flex justify-content-between">
+                          <input
+                            type="text"
+                            id="amount"
+                            readonly
+                            class="d-none"
+                          />
+                          <span id="amount_from" class="text-white"></span>
+                          <span id="amount_to" class="text-white"></span>
+                        </div>
+                        <div id="slider-range" class="range-bar"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <select class="form-select form-control">
+                      <option value hidden>الماركة</option>
+                      <option value>نيسان</option>
+                      <option value>هيونداي</option>
+                      <option value>كيا</option>
+                      <option value>تويوتا</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <select class="form-select form-control">
+                      <option value hidden>الموديل</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <select class="form-select form-control">
+                      <option value hidden>توفر السيارة</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <select class="form-select form-control">
+                      <option value hidden>سنة الصنع</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <select class="form-select form-control">
+                      <option value hidden>نوع القير</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <select class="form-select form-control">
+                      <option value hidden>سعه المحرك</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <button class="main-btn mb-4 w-100">بحث</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8 col-lg-9 pe-md-0">
+              <div class="cars">
+                <div class="row row-cols-md-2 row-cols-1 g-3">
+                  <div class="col">
+                    <div class="card">
+                      <a href="car_details.html" class="link"></a>
+                      <div class="card-img-top">
+                        <div class="owl-carousel">
+                          <img src="images/car (1).jpg" alt="car image" />
+                          <img src="images/car (2).jpg" alt="car image" />
+                          <img src="images/car (3).jpg" alt="car image" />
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <div class="brand_name">تويوتا</div>
+                          <div class="badge">2026</div>
+                        </div>
+                        <h5 class="card-title mb-2">سوناتا كومفورت 2026</h5>
+                        <div class="car-features">
+                          <div
+                            class="w-100 d-flex justify-content-between align-items-center gap-1"
+                          >
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/gas-station.svg"
+                                alt="gas station icon"
+                              />
+                              <span>بنزين</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/manual-gearbox.svg"
+                                alt="manual gearbox icon"
+                              />
+                              <span>اتوماتيك</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/Spedometer Max.svg"
+                                alt="Spedometer Max icon"
+                              />
+                              <span>أًصفار</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/speedometer-01.svg"
+                                alt="speedometer icon"
+                              />
+                              <span>2000 CC – Turbo</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="card-footer d-flex justify-content-between gap-2"
+                      >
+                        <p class="price">
+                          <b>51,000</b>
+                          <img src="images/icons/riyal.png" alt="riyal icon" />
+                          <span>شامل الضريبة</span>
+                        </p>
+                        <a href="finance.html" class="main-btn">اطلب الآن</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <a href="car_details.html" class="link"></a>
+                      <div class="card-img-top">
+                        <div class="owl-carousel">
+                          <img src="images/car (1).jpg" alt="car image" />
+                          <img src="images/car (2).jpg" alt="car image" />
+                          <img src="images/car (3).jpg" alt="car image" />
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <div class="brand_name">تويوتا</div>
+                          <div class="badge">2026</div>
+                        </div>
+                        <h5 class="card-title mb-2">سوناتا كومفورت 2026</h5>
+                        <div class="car-features">
+                          <div
+                            class="w-100 d-flex justify-content-between align-items-center gap-1"
+                          >
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/gas-station.svg"
+                                alt="gas station icon"
+                              />
+                              <span>بنزين</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/manual-gearbox.svg"
+                                alt="manual gearbox icon"
+                              />
+                              <span>اتوماتيك</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/Spedometer Max.svg"
+                                alt="Spedometer Max icon"
+                              />
+                              <span>أًصفار</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/speedometer-01.svg"
+                                alt="speedometer icon"
+                              />
+                              <span>2000 CC – Turbo</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="card-footer d-flex justify-content-between gap-2"
+                      >
+                        <p class="price">
+                          <b>51,000</b>
+                          <img src="images/icons/riyal.png" alt="riyal icon" />
+                          <span>شامل الضريبة</span>
+                        </p>
+                        <a href="finance.html" class="main-btn">اطلب الآن</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <a href="car_details.html" class="link"></a>
+                      <div class="card-img-top">
+                        <div class="owl-carousel">
+                          <img src="images/car (1).jpg" alt="car image" />
+                          <img src="images/car (2).jpg" alt="car image" />
+                          <img src="images/car (3).jpg" alt="car image" />
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <div class="brand_name">تويوتا</div>
+                          <div class="badge">2026</div>
+                        </div>
+                        <h5 class="card-title mb-2">سوناتا كومفورت 2026</h5>
+                        <div class="car-features">
+                          <div
+                            class="w-100 d-flex justify-content-between align-items-center gap-1"
+                          >
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/gas-station.svg"
+                                alt="gas station icon"
+                              />
+                              <span>بنزين</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/manual-gearbox.svg"
+                                alt="manual gearbox icon"
+                              />
+                              <span>اتوماتيك</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/Spedometer Max.svg"
+                                alt="Spedometer Max icon"
+                              />
+                              <span>أًصفار</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/speedometer-01.svg"
+                                alt="speedometer icon"
+                              />
+                              <span>2000 CC – Turbo</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="card-footer d-flex justify-content-between gap-2"
+                      >
+                        <p class="price">
+                          <b>51,000</b>
+                          <img src="images/icons/riyal.png" alt="riyal icon" />
+                          <span>شامل الضريبة</span>
+                        </p>
+                        <a href="finance.html" class="main-btn">اطلب الآن</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <a href="car_details.html" class="link"></a>
+                      <div class="card-img-top">
+                        <div class="owl-carousel">
+                          <img src="images/car (1).jpg" alt="car image" />
+                          <img src="images/car (2).jpg" alt="car image" />
+                          <img src="images/car (3).jpg" alt="car image" />
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <div class="brand_name">تويوتا</div>
+                          <div class="badge">2026</div>
+                        </div>
+                        <h5 class="card-title mb-2">سوناتا كومفورت 2026</h5>
+                        <div class="car-features">
+                          <div
+                            class="w-100 d-flex justify-content-between align-items-center gap-1"
+                          >
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/gas-station.svg"
+                                alt="gas station icon"
+                              />
+                              <span>بنزين</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/manual-gearbox.svg"
+                                alt="manual gearbox icon"
+                              />
+                              <span>اتوماتيك</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/Spedometer Max.svg"
+                                alt="Spedometer Max icon"
+                              />
+                              <span>أًصفار</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/speedometer-01.svg"
+                                alt="speedometer icon"
+                              />
+                              <span>2000 CC – Turbo</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="card-footer d-flex justify-content-between gap-2"
+                      >
+                        <p class="price">
+                          <b>51,000</b>
+                          <img src="images/icons/riyal.png" alt="riyal icon" />
+                          <span>شامل الضريبة</span>
+                        </p>
+                        <a href="finance.html" class="main-btn">اطلب الآن</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <a href="car_details.html" class="link"></a>
+                      <div class="card-img-top">
+                        <div class="owl-carousel">
+                          <img src="images/car (1).jpg" alt="car image" />
+                          <img src="images/car (2).jpg" alt="car image" />
+                          <img src="images/car (3).jpg" alt="car image" />
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <div class="brand_name">تويوتا</div>
+                          <div class="badge">2026</div>
+                        </div>
+                        <h5 class="card-title mb-2">سوناتا كومفورت 2026</h5>
+                        <div class="car-features">
+                          <div
+                            class="w-100 d-flex justify-content-between align-items-center gap-1"
+                          >
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/gas-station.svg"
+                                alt="gas station icon"
+                              />
+                              <span>بنزين</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/manual-gearbox.svg"
+                                alt="manual gearbox icon"
+                              />
+                              <span>اتوماتيك</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/Spedometer Max.svg"
+                                alt="Spedometer Max icon"
+                              />
+                              <span>أًصفار</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/speedometer-01.svg"
+                                alt="speedometer icon"
+                              />
+                              <span>2000 CC – Turbo</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="card-footer d-flex justify-content-between gap-2"
+                      >
+                        <p class="price">
+                          <b>51,000</b>
+                          <img src="images/icons/riyal.png" alt="riyal icon" />
+                          <span>شامل الضريبة</span>
+                        </p>
+                        <a href="finance.html" class="main-btn">اطلب الآن</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <a href="car_details.html" class="link"></a>
+                      <div class="card-img-top">
+                        <div class="owl-carousel">
+                          <img src="images/car (1).jpg" alt="car image" />
+                          <img src="images/car (2).jpg" alt="car image" />
+                          <img src="images/car (3).jpg" alt="car image" />
+                        </div>
+                      </div>
+                      <div class="card-body">
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <div class="brand_name">تويوتا</div>
+                          <div class="badge">2026</div>
+                        </div>
+                        <h5 class="card-title mb-2">سوناتا كومفورت 2026</h5>
+                        <div class="car-features">
+                          <div
+                            class="w-100 d-flex justify-content-between align-items-center gap-1"
+                          >
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/gas-station.svg"
+                                alt="gas station icon"
+                              />
+                              <span>بنزين</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/manual-gearbox.svg"
+                                alt="manual gearbox icon"
+                              />
+                              <span>اتوماتيك</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/Spedometer Max.svg"
+                                alt="Spedometer Max icon"
+                              />
+                              <span>أًصفار</span>
+                            </div>
+                            <div class="car-feature">
+                              <img
+                                src="images/icons/speedometer-01.svg"
+                                alt="speedometer icon"
+                              />
+                              <span>2000 CC – Turbo</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="card-footer d-flex justify-content-between gap-2"
+                      >
+                        <p class="price">
+                          <b>51,000</b>
+                          <img src="images/icons/riyal.png" alt="riyal icon" />
+                          <span>شامل الضريبة</span>
+                        </p>
+                        <a href="finance.html" class="main-btn">اطلب الآن</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- all cars pagination -->
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination">
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">
+                          <i class="fa-solid fa-chevron-right"></i>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">1</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">2</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                      <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">
+                          <i class="fa-solid fa-chevron-left"></i>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- تواصل مع مندوب -->
+    <section class="contact-data py-5">
+      <div class="container-fluid">
+        <div
+          class="row gy-0 align-items-lg-center align-items-end justify-content-between"
+        >
+          <div class="col-lg-7 col-md-8 col-12">
+            <h2 class="title">
+              تواصل مع مندوبي معرض
+              <br />
+              <span class="main-txt"> class cars</span>
+            </h2>
+            <p>
+              اختر سيارتك المثالية من أفضل الموديلات المضمونة، وتواصلي معنا
+              مباشرة لبدء إجراءات الشراء بكل سهولة وسرعة. في Class Cars نوفر لك
+              سيارات فحص معتمد، أسعار منافسة، وتجربة شراء مريحة من أول خطوة حتى
+              استلام السيارة.
+            </p>
+            <a
+              href="https://api.whatsapp.com/send?phone=966568023169"
+              class="main-btn mt-4 mb-3"
+              >تواصل whatsapp</a
+            >
+          </div>
+          <div class="col-lg-4 col-md-4 col-8 ms-auto">
+            <div class="contact-img">
+              <img src="images/contact-img.png" alt="" />
+            </div>
+          </div>
+          <div class="col-12 mb-4 mb-lg-0">
+            <div class="card">
+              <div class="card-body">
+                <div class="row row-cols-lg-3 row-cols-1 gy-4">
+                  <!-- phone -->
+                  <div class="col">
+                    <!-- call -->
+                    <div class="contact-info h-100">
+                      <div class="d-flex gap-2 align-content-center">
+                        <i class="bi bi-telephone"></i>
+                        <div>
+                          <p>الهاتف</p>
+                          <a href="tel:+966112399310">+971 52-333-4444</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- mail -->
+                  <div class="col">
+                    <div class="contact-info h-100">
+                      <div class="d-flex gap-2 align-content-center">
+                        <i class="bi bi-envelope-fill"></i>
+                        <div>
+                          <p>البريد الالكتروني</p>
+                          <a href="mailto:info@classcars.com"
+                            >info@classcars.com</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- location -->
+                  <div class="col">
+                    <div class="contact-info h-100">
+                      <div class="d-flex gap-2 align-content-center">
+                        <i class="bi bi-geo-alt"></i>
+                        <div>
+                          <p>العنوان</p>
+                          <p>Dubai, Water Tower, Office 123</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="#" id="scroll-top">
+      <i class="bi bi-chevron-double-up"></i>
+    </a>
+
+    <footer>
+      <div class="footer-nav py-4">
+        <div class="navbar navbar-expand-lg">
+          <div
+            class="container-fluid gap-3 align-items-start justify-content-between"
+          >
+            <div class="col-lg-4 col-md-6">
+              <div>
+                <a class="navbar-brand m-0" href="index.html">
+                  <img src="images/logo.svg" alt="" />
+                </a>
+                <p class="my-3">
+                  في مجموعة كلاس للسيارات، نقدم لك أفضل الأسعار التي لا تقارن،
+                  وأكبر تشكيلة من السيارات في مكان واحد
+                </p>
+                <nav aria-label="Social Media Links">
+                  <ul class="social-icons">
+                    <li>
+                      <a
+                        href=""
+                        target="_blank"
+                        aria-label="Visit our LinkedIn page"
+                      >
+                        <i class="fa-brands fa-linkedin-in"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""
+                        target="_blank"
+                        aria-label="Visit our Twitter page"
+                      >
+                        <i class="fa-brands fa-x-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""
+                        target="_blank"
+                        aria-label="Visit our Instagram page"
+                      >
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href=""
+                        target="_blank"
+                        aria-label="Visit our Facebook page"
+                      >
+                        <i class="fa-brands fa-facebook-f"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-5">
+              <div class="d-flex gap-4 justify-content-between">
+                <div>
+                  <h4 class="fs-6">روابط سريعة</h4>
+                  <ul class="navbar-nav mb-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">نبذة عنا</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="finance.html">التمويل</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="cars.html">السيارات</a>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="fs-6">الدعم</h4>
+                  <ul class="navbar-nav mb-0">
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">الشروط والأحكام</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="services.html"
+                        >سياسة الخصوصية</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid">
+        <div class="copyrights">
+          <div
+            class="d-flex gap-1 w-100 align-items-center justify-content-center"
+          >
+            <a href="https://smartvision4p.com" class="link" target="_blank">
+            </a>
+            <h2>كل الحقوق محفوظة لشركة سمارت فيجن</h2>
+            <img src="images/smart-logo.svg" alt="شركة سمارت فيجن" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery script -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"
+      integrity="sha512-MSOo1aY+3pXCOCdGAYoBZ6YGI0aragoQsg1mKKBHXCYPIWxamwOE7Drh+N5CPgGI5SA9IEKJiPjdfqWFWmZtRA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- bootstrap script -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- owl-carousel script -->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- select2 script -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/script.js"></script>
+
+    <script>
+      $(function () {
+        var priceFromInput = document.querySelector("[name='from_price']");
+        var priceToInput = document.querySelector("[name='to_price']");
+
+        $("#slider-range").slider({
+          range: true,
+          min: 250,
+          max: 3000,
+          values: [0, 3000],
+          create: function () {
+            // اضف Tooltip فوق كل Handle مع الصورة
+            $("#slider-range .ui-slider-handle").each(function (index) {
+              let tooltipClass = index === 0 ? "tooltip-from" : "tooltip-to";
+              $(this).append(`
+                <div class="slider-tooltip ${tooltipClass}">
+                  <span class="value">0</span>
+                  <img src="images/icons/riyal.png">
+                </div>
+              `);
+            });
+          },
+          slide: function (event, ui) {
+            priceFromInput.value = ui.values[0];
+            priceToInput.value = ui.values[1];
+
+            $("#slider-range .ui-slider-handle")
+              .eq(0)
+              .find(".value")
+              .text(ui.values[0]);
+            $("#slider-range .ui-slider-handle")
+              .eq(1)
+              .find(".value")
+              .text(ui.values[1]);
+
+            $("#amount").val(ui.values[0] + " - " + ui.values[1]);
+          },
+        });
+
+        // القيم الابتدائية
+        let startFrom = $("#slider-range").slider("values", 0);
+        let startTo = $("#slider-range").slider("values", 1);
+
+        priceFromInput.value = startFrom;
+        priceToInput.value = startTo;
+
+        $("#slider-range .ui-slider-handle")
+          .eq(0)
+          .find(".value")
+          .text(startFrom);
+        $("#slider-range .ui-slider-handle").eq(1).find(".value").text(startTo);
+
+        $("#amount").val(startFrom + " - " + startTo);
+      });
+    </script>
+  </body>
+</html>
