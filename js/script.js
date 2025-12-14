@@ -72,43 +72,16 @@ $(document).ready(function () {
 
   });
 
-  $(".cars .owl-carousel").each(function () {
-    // خزّني الكاروسيل الحالي فقط
-    var $thisOwl = $(this).owlCarousel({
-      nav: false,
-      center: true,
-      margin: 16,
-      loop: true,
-      dots: false,
-      autoplay: false,
-      autoplayTimeout: 1000,
-      autoplayHoverPause: false,
-      animateOut: 'fadeOut',
-      rtl: dirAr,
-      items: 1
-    });
-
-    // تشغيل autoplay عند hover على الكاروسيل الحالي فقط
-    $(this).on('mouseenter', function () {
-      $thisOwl.trigger('play.owl.autoplay', [1000]);
-    });
-
-    // إيقاف autoplay عند خروج الماوس
-    $(this).on('mouseleave', function () {
-      $thisOwl.trigger('stop.owl.autoplay');
-    });
-  });
-
-
-  $(".testimonials .owl-carousel").owlCarousel({
+  $(".cars .related_cars.owl-carousel").owlCarousel({
     nav: false,
     loop: false,
+    autoplay: false,
     responsiveClass: true,
     margin: 16,
     rtl: dirAr,
     responsive: {
       0: {
-        items: 1
+        items: 2
       },
       768: {
         items: 2
@@ -117,6 +90,32 @@ $(document).ready(function () {
         items: 3
       }
     }
+  });
+
+  $(".cars .card-img-top .owl-carousel").each(function () {
+    var $this = $(this);
+    var owl = $this.owlCarousel({
+      nav: false,
+      center: true,
+      margin: 16,
+      loop: true,
+      dots: false,
+      autoplay: false,
+      animateOut: 'fadeOut',
+      rtl: dirAr,
+      items: 1
+    });
+
+    $this.on('mouseenter', function (e) {
+      e.stopPropagation(); // ✋ يمنع وصول الحدث للكبير
+      owl.trigger('play.owl.autoplay', [1000]);
+    });
+
+    $this.on('mouseleave', function (e) {
+      e.stopPropagation();
+      owl.trigger('stop.owl.autoplay');
+    });
+
   });
 
   var $carousel = $(".car_brand_filter .owl-carousel");
@@ -145,6 +144,64 @@ $(document).ready(function () {
       }
     }
   });
+
+  $(".testimonials .owl-carousel").owlCarousel({
+    nav: false,
+    loop: false,
+    responsiveClass: true,
+    margin: 16,
+    rtl: dirAr,
+    responsive: {
+      0: {
+        items: 1
+      },
+      768: {
+        items: 2
+      },
+      992: {
+        items: 3
+      }
+    }
+  });
+
+
+  var swiper = new Swiper(".carSwiper", {
+    // slidesPerView: "auto",
+    // spaceBetween: 16,
+    // centeredSlides: true,
+    // slideToClickedSlide: true,
+    // loop: true,
+    // speed: 200,
+    // rtl: dirAr,
+    // grabCursor: true,
+    // pagination: {
+    //     el: ".swiper-pagination",
+    //     clickable: true,
+    //   },
+
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    centeredSlides: true,
+    loop: true,
+    speed: 600,
+    rtl: true,
+    grabCursor: true,
+    slideToClickedSlide: true
+  });
+
+
+  // expand cards
+  document.querySelectorAll('.car-gallery-slider .item').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.car-gallery-slider .item').forEach(c => {
+        c.classList.remove('active-card');
+        c.classList.add('small-card');
+      });
+      card.classList.add('active-card');
+      card.classList.remove('small-card');
+    });
+  });
+
 
   // upload file or image
   $(".file-input").change(function () {
