@@ -277,10 +277,16 @@ option {
 .form-control,
 .form-select {
    background-color: transparent !important;
-   border: 0.8px solid rgba(242, 242, 242, 0.50);
+   border: 0.8px solid rgba(var(--whiteOp), .08);
    color: var(--white) !important;
    box-shadow: unset !important;
-   padding-block: .675rem;
+   padding-block: .5rem;
+   border-radius: .5rem;
+   -webkit-border-radius: .5rem;
+   -moz-border-radius: .5rem;
+   -ms-border-radius: .5rem;
+   -o-border-radius: .5rem;
+   font-weight: 300;
 }
 
 .form-control:focus,
@@ -384,6 +390,7 @@ option {
    border: 2px solid var(--main);
    position: relative;
    z-index: 999;
+   min-width: 7rem !important;
    clip-path: polygon(10% 0%, 100% 0, 100% 0, 100% 75%, 90% 100%, 0 100%, 0 100%, 0% 25%);
 }
 
@@ -897,32 +904,10 @@ a.nav-link {
 
 .about-text img {
    aspect-ratio: 11 / 6;
+   object-fit: cover;
 }
 
-.about ul>li {
-   padding-block: 1.25rem;
-   padding-inline-start: 4.5rem;
-   position: relative;
-   border-bottom: 1px solid rgba(var(--whiteOp), 0.224);
-}
 
-.about ul>li:hover {
-   border-bottom: 1px solid var(--main);
-}
-
-.about ul>li::after {
-   content: url('../images/icons/about-feature.png');
-   position: absolute;
-   top: 50%;
-   inset-inline-start: .75rem;
-   width: 3.3rem;
-   aspect-ratio: 1/1;
-   transform: translateY(-50%);
-   -webkit-transform: translateY(-50%);
-   -moz-transform: translateY(-50%);
-   -ms-transform: translateY(-50%);
-   -o-transform: translateY(-50%);
-}
 
 /* ------------ car financing ------------ */
 
@@ -1636,6 +1621,11 @@ input::placeholder {
    -o-border-radius: 18px;
 }
 
+
+.contact-data label{
+   font-weight: 300;
+   font-size: .9rem;
+}
 
 
 .all .offer-badge {
