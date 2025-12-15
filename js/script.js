@@ -19,6 +19,37 @@ $(document).ready(function () {
   });
 
 
+  // let started = false;
+  // function animateCounters() {
+  //   $('.counter').each(function () {
+  //     let $this = $(this);
+  //     let target = +$this.attr('data-target');
+
+  //     $({ countNum: $this.text() }).animate(
+  //       { countNum: target },
+  //       {
+  //         duration: 2000,
+  //         easing: 'swing',
+  //         step: function () {
+  //           $this.text(Math.floor(this.countNum));
+  //         },
+  //         complete: function () {
+  //           $this.text(this.countNum);
+  //         }
+  //       }
+  //     );
+  //   });
+  // }
+
+  // if ($('.counter').length > 0) {
+  //   $(window).on('scroll', function () {
+  //     animateCounters();
+
+  //   });
+
+  // }
+
+
   $(".hero-sec .cars-slider.owl-carousel").owlCarousel({
     nav: false,
     center: true,
@@ -81,7 +112,7 @@ $(document).ready(function () {
     rtl: dirAr,
     responsive: {
       0: {
-        items: 2
+        items: 1
       },
       768: {
         items: 2

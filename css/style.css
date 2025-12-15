@@ -809,6 +809,7 @@ a.nav-link {
    color: var(--white);
 }
 
+.achievement,
 .car-feature {
    display: flex;
    align-items: center;
@@ -821,10 +822,12 @@ a.nav-link {
    width: 1.1rem !important;
 }
 
+.about .card.counter-wrapper,
 .car-details .card.car-features {
    background: var(--dark-bg) !important;
 }
 
+.about .achievement,
 .car-details .car-feature {
    padding-block: .4rem;
 }
@@ -861,28 +864,53 @@ a.nav-link {
 }
 
 /* ------------------------ about us ----------------- */
-.about-us p {
+.about p {
    font-size: .85rem;
    line-height: 1.8;
 }
 
-.about-us .about-desc {
+.about .achievement {
+   flex-direction: column;
+}
+
+.about .counter {
+   background: var(--linear);
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   font-size: 1.8rem;
+   font-weight: 700;
+}
+
+.about .about-desc {
    line-height: 2;
    font-size: 1.05rem;
 }
 
-.about-us ul>li {
+.about-text {
+   border-block: 1px solid rgba(var(--whiteOp), .2);
+}
+
+.about-text .about-desc {
+   padding-block: 1rem;
+}
+
+.about-text img {
+   aspect-ratio: 11 / 6;
+}
+
+.about ul>li {
    padding-block: 1.25rem;
    padding-inline-start: 4.5rem;
    position: relative;
    border-bottom: 1px solid rgba(var(--whiteOp), 0.224);
 }
 
-.about-us ul>li:hover {
+.about ul>li:hover {
    border-bottom: 1px solid var(--main);
 }
 
-.about-us ul>li::after {
+.about ul>li::after {
    content: url('../images/icons/about-feature.png');
    position: absolute;
    top: 50%;
@@ -1550,12 +1578,13 @@ input::placeholder {
    font-weight: 300;
 }
 
-.features-tags ul{
+.features-tags ul {
    display: flex;
    gap: .5rem;
    flex-wrap: wrap;
 }
-.features-tags li{
+
+.features-tags li {
    background: var(--dark-bg);
    padding: .32rem .65rem;
    font-weight: 300;
@@ -1564,6 +1593,7 @@ input::placeholder {
    display: inline-flex;
 }
 
+.about .achievement:not(:last-child),
 .car-details .car-feature:not(:last-child),
 .contact-data .col:not(:last-child) .contact-info {
    border-inline-end: 1px solid rgba(var(--whiteOp), 0.2);
