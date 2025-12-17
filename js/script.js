@@ -18,6 +18,44 @@ $(document).ready(function () {
     $(".filter").toggleClass("filter-toggle");
   });
 
+  const paymentSelect = $("select[name='payment_method']");
+  const bankSelect = $("select[name='bank']");
+  let bankSelectInitialized = false;
+
+  // Select2 لطريقة الدفع
+  paymentSelect.select2({
+    minimumResultsForSearch: Infinity
+  });
+
+  function toggleInstallmentFields() {
+    const value = paymentSelect.val();
+
+    if (value === "installment") {
+
+      $(".if_installment").slideDown(200, function () {
+
+        // هيّئ Select2 للبنك مرة واحدة فقط
+        if (!bankSelectInitialized) {
+          bankSelect.select2({
+            width: "100%"
+          });
+          bankSelectInitialized = true;
+        }
+
+      });
+
+    } else {
+      $(".if_installment").slideUp(200);
+    }
+  }
+
+  paymentSelect.on("change", toggleInstallmentFields);
+
+  // في حالة reload / edit
+  toggleInstallmentFields();
+
+
+
 
   // let started = false;
   // function animateCounters() {

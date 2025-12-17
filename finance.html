@@ -81,10 +81,10 @@
                 <a href="cars.html" class="nav-link">السيارات</a>
               </li>
               <li class="nav-item">
-                <a href="finance.html" class="nav-link">التمويل</a>
+                <a href="finance.html" class="nav-link active">التمويل</a>
               </li>
               <li class="nav-item">
-                <a href="contact_us.html" class="nav-link active">اتصل بنا</a>
+                <a href="contact_us.html" class="nav-link">اتصل بنا</a>
               </li>
             </ul>
             <ul class="navbar-nav m-0">
@@ -113,101 +113,160 @@
         <div class="container-fluid">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">الرئيسية</a></li>
-            <li class="breadcrumb-item active" aria-current="page">اتصل بنا</li>
+            <li class="breadcrumb-item"><a href="index.html">السيارات</a></li>
+            <li class="breadcrumb-item active" aria-current="page">اطلب الأن</li>
           </ol>
-          <p class="breadcrumb-title">اتصل بنا</p>
+          <p class="breadcrumb-title">اطلب الأن</p>
         </div>
       </nav>
     </section>
     <!-- ==== end breadcrumb ==== -->
 
+    <!--  -->
+    <section class="finance py-5">
+      <div class="container-fluid">
+          <div class="box_wrapper col-md-10 m-auto">
+              <div class="title-wrapper mb-4">
+                  <img src="images/icons/car-outline.svg" alt="">
+                  <h2 class="fs-6 mb-0">شراء سيارة للأفراد</h2>
+              </div>
+              <form action="">
+            <div class="row g-3">
+              <!-- الاسم -->
+              <div class="col-lg-6 col-12">
+                <div class="form-group">
+                  <label for="" class="text-white-50 mb-2"> الاسم </label>
+                  <input
+                    type="text"
+                    name="name"
+                    value=""
+                    class="form-control"
+                    placeholder="الإسم"
+                    required=""
+                  />
+                </div>
+              </div>
+              <!-- البريد الإلكتروني -->
+              <div class="col-lg-6 col-12">
+                <div class="form-group">
+                  <label for="" class="text-white-50 mb-2">
+                    البريد الإلكتروني
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    value=""
+                    class="form-control"
+                    placeholder="البريد الإلكتروني"
+                    required=""
+                  />
+                </div>
+              </div>
+              <!-- رقم الهاتف -->
+              <div class="col-12">
+                <div class="form-group">
+                  <label for="" class="text-white-50 mb-2"> رقم الهاتف </label>
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      name="subject"
+                      value=""
+                      class="form-control"
+                      placeholder="رقم الهاتف"
+                      required=""
+                    />
+                    <span class="input-group-text" id="basic-addon1">+966</span>
+                  </div>
+                </div>
+              </div>
+              <!-- المنطقة -->
+              <div class="col-lg-6 col-12">
+                <div class="form-group">
+                  <label for="" class="text-white-50 mb-2"> المنطقة </label>
+                  <select class="form-select form-control" name="area">
+                    <option value="" hidden>اختر المنطقة</option>
+                  </select>
+                </div>
+              </div>
+              <!-- المدينة -->
+              <div class="col-lg-6 col-12">
+                <div class="form-group">
+                  <label for="" class="text-white-50 mb-2"> المدينة </label>
+                  <select class="form-select form-control" name="city">
+                    <option value="" hidden>اختر المدينة</option>
+                  </select>
+                </div>
+              </div>
+              <!-- السيارة -->
+              <div class="col-lg-6 col-12">
+                <div class="form-group">
+                  <label for="" class="text-white-50 mb-2"> السيارة </label>
+                  <select class="form-select form-control" name="car_brand_select">
+                    <option value="" hidden>اختر السيارة</option>
+                  </select>
+                </div>
+              </div>
+              <!-- طريقة الدفع -->
+              <div class="col-lg-6 col-12">
+                <div class="form-group">
+                  <label for="" class="text-white-50 mb-2"> طريقة الدفع </label>
+                  <select class="form-select form-control" name="payment_method">
+                    <option value="" hidden>حدد طريقة الدفع </option>
+                    <option value="cash">كاش</option>
+                    <option value="installment">تقسيط</option>
+                  </select>
+                </div>
+              </div>
+              <!-- البنك -->
+              <div class="col-lg-6 col-12 if_installment">
+                <div class="form-group">
+                  <label for="" class="text-white-50 mb-2"> البنك </label>
+                  <select class="form-select form-control" name="bank">
+                    <option value="" hidden>اختر البنك</option>
+                  </select>
+                </div>
+              </div>
+              <!-- الراتب -->
+              <div class="col-lg-6 col-12 if_installment">
+                <div class="form-group">
+                  <label for="" class="text-white-50 mb-2"> الراتب </label>
+                  <input
+                    type="text"
+                    name="salary"
+                    value=""
+                    class="form-control"
+                    placeholder="ادخل الراتب"
+                    required=""
+                  />
+                </div>
+              </div>
+              <!-- الالتزامات -->
+              <div class="col-12 if_installment">
+                <div class="form-group">
+                  <label for="" class="text-white-50 mb-2"> الالتزامات </label>
+                  <input
+                    type="text"
+                    name="financial_obligations"
+                    value=""
+                    class="form-control"
+                    placeholder="ادخل الالتزامات"
+                    required=""
+                  />
+                </div>
+              </div>
+            </div>
+            <button class="main-btn mt-5 px-5 m-auto" type="submit">
+              إرسال
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <!-- تواصل مع مندوب -->
     <section class="contact-data py-5">
       <div class="container-fluid">
         <div class="row gy-0 align-items-end justify-content-between">
-          <div class="col-lg-5 col-md-8 col-12">
-            <h2 class="fs-4 mb-2">تواصل معنا</h2>
-            <p class="mb-4 text-white-50">
-              قسم الاتصال هو بوابتك للوصول إلينا نرحب باستفساراتكم واقتراحاتكم.
-            </p>
-            <form action="" class="mb-3">
-              <div class="row justify-content-center g-3">
-                <!-- الاسم -->
-                <div class="col-lg-6 col-12">
-                  <div class="form-group">
-                    <label for="" class="text-white-50 mb-2"> الاسم </label>
-                    <input
-                      type="text"
-                      name="name"
-                      value=""
-                      class="form-control"
-                      placeholder="الإسم"
-                      required=""
-                    />
-                  </div>
-                </div>
-                <!-- البريد الإلكتروني -->
-                <div class="col-lg-6 col-12">
-                  <div class="form-group">
-                    <label for="" class="text-white-50 mb-2">
-                      البريد الإلكتروني
-                    </label>
-                    <input
-                      type="email"
-                      name="email"
-                      value=""
-                      class="form-control"
-                      placeholder="البريد الإلكتروني"
-                      required=""
-                    />
-                  </div>
-                </div>
-                <!-- رقم الهاتف -->
-                <div class="col-12">
-                  <div class="form-group">
-                    <label for="" class="text-white-50 mb-2">
-                      رقم الهاتف
-                    </label>
-                    <div class="input-group">
-                      <input
-                        type="text"
-                        name="subject"
-                        value=""
-                        class="form-control"
-                        placeholder="رقم الهاتف"
-                        required=""
-                      />
-                      <span class="input-group-text" id="basic-addon1"
-                        >+966</span
-                      >
-                    </div>
-                  </div>
-                </div>
-                <!-- الرسالة -->
-                <div class="col-12">
-                  <div class="form-group">
-                    <label for="" class="text-white-50 mb-2"> الرسالة </label>
-                    <textarea
-                      name="message"
-                      cols="40"
-                      rows="6"
-                      class="form-control"
-                      placeholder="الرسالة"
-                      required=""
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-              <button class="main-btn mt-4 px-5 ms-auto" type="submit">
-                إرسال
-              </button>
-            </form>
-          </div>
-          <div class="col-lg-4 col-md-4 col-8 ms-auto">
-            <div class="contact-img">
-              <img src="images/contact-img.png" alt="" />
-            </div>
-          </div>
           <div class="col-12 mb-4 mb-lg-0">
             <div class="card">
               <div class="card-body">
